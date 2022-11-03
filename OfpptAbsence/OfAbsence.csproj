@@ -1,0 +1,243 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3FCFA4CD-CB35-477E-9077-56F28E806A0D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>OfpptAbsence</RootNamespace>
+    <AssemblyName>OfpptAbsence</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>C:\Users\Simo\Downloads\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelDataReader, Version=3.6.0.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelDataReader.3.6.0\lib\net45\ExcelDataReader.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelDataReader.DataSet, Version=3.6.0.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelDataReader.DataSet.3.6.0\lib\net35\ExcelDataReader.DataSet.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Z.Dapper.Plus, Version=3.0.12.0, Culture=neutral, PublicKeyToken=59b66d028979105b, processorArchitecture=MSIL">
+      <HintPath>..\packages\Z.Dapper.Plus.3.0.12\lib\net45\Z.Dapper.Plus.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EnregistrerAbsence\AbsInformationControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EnregistrerAbsence\AbsInformationControl.Designer.cs">
+      <DependentUpon>AbsInformationControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EnregistrerAbsence\AbsJustControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EnregistrerAbsence\AbsJustControl.Designer.cs">
+      <DependentUpon>AbsJustControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ado.cs" />
+    <Compile Include="EnregistrerAbsence\ControlAbsence.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EnregistrerAbsence\ControlAbsence.Designer.cs">
+      <DependentUpon>ControlAbsence.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EnregistrerAbsence\ControlChargerStagiaires.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EnregistrerAbsence\ControlChargerStagiaires.Designer.cs">
+      <DependentUpon>ControlChargerStagiaires.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stagiaire\ControlExcel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Stagiaire\ControlExcel.designer.cs">
+      <DependentUpon>ControlExcel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controle.cs" />
+    <Compile Include="ControlRecherch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlRecherch.Designer.cs">
+      <DependentUpon>ControlRecherch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUtilisateur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUtilisateur.Designer.cs">
+      <DependentUpon>FormUtilisateur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAuthentification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAuthentification.designer.cs">
+      <DependentUpon>FormAuthentification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GestionUserControl.Designer.cs">
+      <DependentUpon>GestionUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EnregistrerAbsence\ModifierAbsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EnregistrerAbsence\ModifierAbsControl.Designer.cs">
+      <DependentUpon>ModifierAbsControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stagiaire\NouveauStagiaireControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Stagiaire\NouveauStagiaireControl.Designer.cs">
+      <DependentUpon>NouveauStagiaireControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="EnregistrerAbsence\AbsNonJustControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EnregistrerAbsence\AbsNonJustControl.Designer.cs">
+      <DependentUpon>AbsNonJustControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EnregistrerAbsence\RetardControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EnregistrerAbsence\RetardControl.Designer.cs">
+      <DependentUpon>RetardControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stagiaire.cs" />
+    <Compile Include="Stagiaire\StagiaireControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Stagiaire\StagiaireControl.Designer.cs">
+      <DependentUpon>StagiaireControl.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="EnregistrerAbsence\AbsInformationControl.resx">
+      <DependentUpon>AbsInformationControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EnregistrerAbsence\AbsJustControl.resx">
+      <DependentUpon>AbsJustControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EnregistrerAbsence\ControlAbsence.resx">
+      <DependentUpon>ControlAbsence.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EnregistrerAbsence\ControlChargerStagiaires.resx">
+      <DependentUpon>ControlChargerStagiaires.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stagiaire\ControlExcel.resx">
+      <DependentUpon>ControlExcel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlRecherch.resx">
+      <DependentUpon>ControlRecherch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUtilisateur.resx">
+      <DependentUpon>FormUtilisateur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAuthentification.resx">
+      <DependentUpon>FormAuthentification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionUserControl.resx">
+      <DependentUpon>GestionUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EnregistrerAbsence\ModifierAbsControl.resx">
+      <DependentUpon>ModifierAbsControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stagiaire\NouveauStagiaireControl.resx">
+      <DependentUpon>NouveauStagiaireControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="EnregistrerAbsence\AbsNonJustControl.resx">
+      <DependentUpon>AbsNonJustControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EnregistrerAbsence\RetardControl.resx">
+      <DependentUpon>RetardControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stagiaire\StagiaireControl.resx">
+      <DependentUpon>StagiaireControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lock_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lock2_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_male_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_male2_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\attendance_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\normal_screen_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\full_screen_32px.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
